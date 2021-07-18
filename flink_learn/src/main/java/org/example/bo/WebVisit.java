@@ -14,6 +14,8 @@ public class WebVisit {
 
     private String ip;
 
+    private long openTimestamp;
+
     public String getBrowser() {
         return browser;
     }
@@ -52,5 +54,13 @@ public class WebVisit {
 
     public void setIp(String ip) {
         this.ip = ip;
+    }
+
+    public void setOpenTimestamp(long time) {
+        this.openTimestamp = time;
+    }
+
+    public long getOpenTimestamp() {
+        return this.openTimestamp;
     }
 }
