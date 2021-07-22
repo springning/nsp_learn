@@ -31,6 +31,8 @@ public class FlinkSqlEventtimeBase {
     public static void main(String[] args) throws Exception {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        //在WatermarkGenerator实现了onPeriodicEmit()方法时起作用
+        env.getConfig().setAutoWatermarkInterval(10000);
         // 指定使用Eventtime
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         EnvironmentSettings envSetting = EnvironmentSettings
