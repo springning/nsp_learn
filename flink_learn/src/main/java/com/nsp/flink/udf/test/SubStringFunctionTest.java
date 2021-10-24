@@ -23,5 +23,7 @@ public class SubStringFunctionTest {
         blinkStreamTableEnvironment.sqlQuery("SELECT SubstringFunction(myField, 5, 12) FROM MyTable");
 
         blinkStreamTableEnvironment.getConfig().addJobParameter("xxx", "");
+
+        System.out.println("1111");
     }
 }
