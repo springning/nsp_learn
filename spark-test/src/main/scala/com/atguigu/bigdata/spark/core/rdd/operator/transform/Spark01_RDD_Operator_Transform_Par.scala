@@ -28,6 +28,7 @@ object Spark01_RDD_Operator_Transform_Par {
             num => {
                 println("######" + num)
                 num
+                println("-------------------------------------------")
             }
         )
 

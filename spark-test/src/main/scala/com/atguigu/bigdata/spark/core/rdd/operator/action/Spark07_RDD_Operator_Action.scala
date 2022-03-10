@@ -29,7 +29,7 @@ object Spark07_RDD_Operator_Action {
     }
     //class User extends Serializable {
     // 样例类在编译时，会自动混入序列化特质（实现可序列化接口）
-    //case class User() {
+//    case class User() {
     class User {
         var age : Int = 30
     }

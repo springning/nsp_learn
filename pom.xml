@@ -299,6 +299,38 @@ under the License.
                         </lifecycleMappingMetadata>
                     </configuration>
                 </plugin>
+
+                <plugin>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>scala-maven-plugin</artifactId>
+                    <version>3.2.1</version>
+                    <executions>
+                        <execution>
+                            <id>scala-compile-first</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>add-source</goal>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>scala-test-compile</id>
+                            <phase>process-test-resources</phase>
+                            <goals>
+                                <goal>add-source</goal>
+                                <goal>testCompile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+<!--                        <args>-->
+<!--                            &lt;!&ndash; 编译时使用 libs 目录下的 jar 包，通过 mvn scala:help 查看说明 &ndash;&gt;-->
+<!--                            <arg>-extdirs</arg>-->
+<!--                            <arg>${project.basedir}/libs</arg>-->
+<!--                        </args>-->
+<!--                        <scalaVersion>2.11.8</scalaVersion>-->
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
